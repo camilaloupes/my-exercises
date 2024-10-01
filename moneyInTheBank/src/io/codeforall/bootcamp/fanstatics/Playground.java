@@ -4,22 +4,20 @@ public class Playground {
 
     public static void main(String[] args) {
 
-        Person person1 = new Person("Camila", 0);
-        Person person2 = new Person("Anderson", 5);
+        Person person1 = new Person("Camila", 0 );
+        Person person2 = new Person("Anderson", 0);
 
         person1.getAccountBalance();
-        System.out.println("Your balance is: " + person1.bradesco.getAccountBalance());
 
         person1.getName();
 
-        person1.bradesco.deposit(100);
+        person1.depositPerson(1);
 
-            System.out.println("You deposited: "+ person1.bradesco.currentMoney +"."+" Your account has: " + person1.bradesco.accountBalance);
+        person1.withdrawPerson(5);
+
+        person2.getAccountBalance();
 
 
-        person1.bradesco.withdraw(5);
-
-        System.out.println("You took: "+ person1.bradesco.currentMoney + " from your account. Your account has: " + person1.bradesco.accountBalance);
 
     }
   }

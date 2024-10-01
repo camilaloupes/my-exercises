@@ -14,11 +14,17 @@ public class Person {
     }
 
     public void getAccountBalance() {
-        System.out.println(bradesco.accountBalance);
+        System.out.println(name +", your balance is: " + bradesco.getAccountBalance());
 
     }
-
-
+    public void depositPerson(int currentMoney){
+        bradesco.deposit(currentMoney);
+        System.out.println(name +", you deposited: "+ bradesco.currentMoney +". Your account has: " + bradesco.accountBalance);
+    }
+    public void withdrawPerson(int currentMoney){
+        bradesco.withdraw(currentMoney);
+        System.out.println(name + ", you took: "+ bradesco.currentMoney + " from your account. Your account has: " + bradesco.accountBalance);
+    }
     }
 
 
