@@ -65,7 +65,7 @@ public class Game {
 
         for (int i = 0; i <gameObjects.length ; i++) {
 
-            gameObjects[i] = Math.random() < ENEMY_PROBABILITY ? GameObjectFactory.createEnemy() : new Tree();
+            gameObjects[i] = Math.random() < ENEMY_PROBABILITY ? GameObjectFactory.createEnemies() : new Tree();
 
         }
 

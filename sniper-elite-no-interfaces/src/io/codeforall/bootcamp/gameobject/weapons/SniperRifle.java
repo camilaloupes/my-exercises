@@ -29,13 +29,13 @@ public class SniperRifle {
      * Take a shoot at an enemy
      * @param target the enemy to shoot
      */
-    public void shoot(Destroyable target) {
+    public void shoot(Destroyable destroyable) {
 
         shotsFired++;
 
         if(Math.random() < HIT_PROBABILITY) {
 
-            target.hit(bulletDamage);
+            destroyable.hit(bulletDamage);
             System.out.println("It's a hit!");
 
         } else {

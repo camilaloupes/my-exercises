@@ -5,11 +5,11 @@ import io.codeforall.bootcamp.gameobject.GameObject;
 public class Barrel extends GameObject implements Destroyable {
 
     public BarrelType barrelType;
-    private int currentDamage = 50;
+    private int currentDamage;
     public boolean destroyed;
 
     public Barrel(BarrelType barrelType){
-
+        this.barrelType = barrelType;
         int random = (int)(Math.random()*BarrelType.values().length);
 
                 switch(barrelType){
@@ -26,10 +26,9 @@ public class Barrel extends GameObject implements Destroyable {
 
     @Override
     public void hit(int bulletDamage) {
-        if (bulletDamage > currentDamage){
-            destroyed = true;
+        barrelType.setMaxDamage(barrelType.getMaxDamage() - currentDamage);
         }
-    }
+
 
     @Override
     public boolean isDestroyed() {
