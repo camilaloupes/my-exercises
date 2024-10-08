@@ -5,7 +5,7 @@ import io.codeforall.bootcamp.gameobject.GameObject;
 /**
  * An enemy class containing generic enemy functionality and meant for subclassing
  */
-public abstract class Enemy extends GameObject {
+public abstract class Enemy extends GameObject implements Destroyable{
 
     private int health;
 

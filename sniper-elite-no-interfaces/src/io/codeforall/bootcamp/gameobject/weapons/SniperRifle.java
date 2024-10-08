@@ -1,5 +1,6 @@
 package io.codeforall.bootcamp.gameobject.weapons;
 
+import io.codeforall.bootcamp.gameobject.enemy.Destroyable;
 import io.codeforall.bootcamp.gameobject.enemy.Enemy;
 
 /**
@@ -28,7 +29,7 @@ public class SniperRifle {
      * Take a shoot at an enemy
      * @param target the enemy to shoot
      */
-    public void shoot(Enemy target) {
+    public void shoot(Destroyable target) {
 
         shotsFired++;
 

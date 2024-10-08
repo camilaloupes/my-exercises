@@ -12,4 +12,8 @@ public class SoldierEnemy extends Enemy {
         super(health);
     }
 
+    @Override
+    public boolean isDestroyed() {
+        return false;
+    }
 }
