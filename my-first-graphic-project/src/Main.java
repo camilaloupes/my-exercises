@@ -16,8 +16,11 @@ public class Main {
         ellipse.setColor(Color.GREEN);
         ellipse.fill();
 
-        Text text = new Text(480,500, "the green sun");
+        Text text = new Text(470,500, "WOW A SUPERSTAR!");
         text.draw();
         text.setColor(Color.BLACK);
+
+ Star star= new Star();
+ Star star2 = new Star();
     }
 }
