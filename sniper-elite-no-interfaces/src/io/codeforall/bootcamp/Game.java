@@ -3,7 +3,6 @@ package io.codeforall.bootcamp;
 import io.codeforall.bootcamp.gameobject.GameObject;
 import io.codeforall.bootcamp.gameobject.GameObjectFactory;
 import io.codeforall.bootcamp.gameobject.decor.Tree;
-import io.codeforall.bootcamp.gameobject.enemy.Destroyable;
 import io.codeforall.bootcamp.gameobject.enemy.Enemy;
 import io.codeforall.bootcamp.gameobject.weapons.SniperRifle;
 
@@ -38,10 +37,10 @@ public class Game {
 
             System.out.println(gameObject.getMessage());
 
-            if (gameObject instanceof Destroyable) {
+            if (gameObject instanceof Enemy) {
 
-                Destroyable target = (Destroyable) gameObject;
-                while (!target.isDestroyed()) {
+                Enemy target = (Enemy) gameObject;
+                while (!target.isDead()) {
 
                     System.out.println("Making the shot...");
                     sniperRifle.shoot(target);
@@ -65,7 +64,7 @@ public class Game {
 
         for (int i = 0; i <gameObjects.length ; i++) {
 
-            gameObjects[i] = Math.random() < ENEMY_PROBABILITY ? GameObjectFactory.createEnemies() : new Tree();
+            gameObjects[i] = Math.random() < ENEMY_PROBABILITY ? GameObjectFactory.createEnemy() : new Tree();
 
         }
 

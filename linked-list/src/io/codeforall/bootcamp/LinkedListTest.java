@@ -2,7 +2,7 @@ package io.codeforall.bootcamp;
 
 public class LinkedListTest {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         LinkedListTest test = new LinkedListTest();
         test.assertCondition("Add data to the list", test.testAdd());

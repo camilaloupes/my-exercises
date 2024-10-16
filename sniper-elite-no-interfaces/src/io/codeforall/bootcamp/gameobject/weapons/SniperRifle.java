@@ -1,6 +1,5 @@
 package io.codeforall.bootcamp.gameobject.weapons;
 
-import io.codeforall.bootcamp.gameobject.enemy.Destroyable;
 import io.codeforall.bootcamp.gameobject.enemy.Enemy;
 
 /**
@@ -29,13 +28,13 @@ public class SniperRifle {
      * Take a shoot at an enemy
      * @param target the enemy to shoot
      */
-    public void shoot(Destroyable destroyable) {
+    public void shoot(Enemy target) {
 
         shotsFired++;
 
         if(Math.random() < HIT_PROBABILITY) {
 
-            destroyable.hit(bulletDamage);
+            target.hit(bulletDamage);
             System.out.println("It's a hit!");
 
         } else {
